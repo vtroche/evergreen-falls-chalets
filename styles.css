@@ -1,0 +1,329 @@
+/* CSS Reset Code */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+	--black:	#000;
+	--white:	#FDFEFF;
+	--green: 	#006341;
+	--red: 		#D90416;
+
+	--header-fonts:'Sunflower', 'Trebuchet MS', sans-serif;
+	--body-fonts: 'Trebuchet MS', Verdana, sans-serif;
+	--backup-fonts: Arial, Verdana, sans-serif;
+}
+
+body{
+	margin:	0 auto;
+	max-width: 1280px;
+	font-family: var(--fonts);
+
+}
+
+header, main, footer{
+	max-width: 1280px;
+	margin:	0 auto;
+}
+
+header, footer{
+text-align: center;
+}
+
+header{
+	height: 600px;
+	background-image: url(images/swiss-valley.jpg);
+	background-repeat: no-repeat;
+	font-family: var(--header-fonts);
+}
+
+nav{
+	width: 50%;
+	margin:	0 auto;
+	margin: 0 auto;
+    display: block;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+nav ul{
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	padding-top: 1rem;
+	font-family: var(--body-fonts);
+}
+
+nav	a{
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--green);
+	background-color:var(--white);
+	padding: 1rem;
+	font-size: 1rem;
+	font-family: var(--body-fonts);
+}
+
+nav a:hover{
+	background-color: var(--green);
+	color: white;
+	font-family: var(--body-fonts);
+}
+
+h1{
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 30px;
+	font-family: var(--header-fonts);
+}
+
+h1 a{
+	text-decoration: none;
+	color: var(--black);
+}
+h2{
+	text-align: center;
+	font-size: 2rem;
+	padding-bottom: 20px;
+	font-weight: bold;
+	font-family: var(--header-fonts);
+}
+
+h3{
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-family: var(--header-fonts);
+}
+
+#grid{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+
+#grid p{
+	grid-column: 1/-1;
+	text-align: left;
+	padding-bottom: 40px;
+	font-size: 1rem;
+	margin-right: 45px;
+	font-family: var(--body-fonts);
+	line-height: 1.35;
+}
+
+#grid h2{
+	grid-column: 1/-1;
+	text-align: center;
+}
+#grid img{
+	padding-bottom: 30px;
+}
+
+#contact{
+	display: grid;
+	grid-template-columns: repeat(2,0.3fr);
+	column-gap: 30px;
+	margin-left: 260px;
+	margin-right: auto;
+}
+
+#contact h2{
+	text-align: left;
+	font-family: var(--header-fonts);
+}
+#contact p{
+	text-align: left;
+	padding-bottom: 20px;
+	grid-column: 1;
+	font-size: 1rem;
+	font-family: var(--body-fonts);
+}
+
+#contact img{
+	grid-column: 1;
+}
+
+form{
+	width: 300px;
+	border-radius: 4px;
+	margin-bottom: 75px;
+	margin-top: -110px;
+	font-family: var(--body-fonts);
+}
+
+input, label, select, textarea{
+	display: block;
+	width: 100%;
+}
+
+label{
+	margin: 0 0 4px 16px;
+	font-weight: bold;
+}
+
+.required{
+	font-weight: bold;
+	font-size: 1.35rem;
+	color: var(--green);
+}
+
+input, select, textarea{
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 24px;
+}
+
+fieldset{
+	margin-bottom: 24px;
+	display: grid;
+	row-gap: 8px;
+	border:	solid	2px	var(--black);
+	width: 323px;
+}
+
+legend{
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+fieldset label{
+	margin-left: 10px;
+	color:var(--black);
+}
+
+input[type="radio"] + label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+input[type="radio"] {
+   	appearance: none;
+   	margin: 0;
+	padding: 0;
+	font-size: 0;
+	border-radius: 0;
+}
+
+input[type="radio"] + label::before {
+   	content: "\00a0";
+	font-size: 2.25em;
+	line-height: 0.65;
+   	border-radius: 50%;
+   	display: inline-block;  
+   	height: 20px;
+   	width: 22px;
+   	text-align: center;
+   	margin-right: 16px;
+   	border: 2px solid white;
+	padding-bottom: 2px;
+}
+
+input[type="radio"]:checked + label::before {
+   	content: "\2022";
+   	color: #fff;
+   	background: var(--green);
+}
+
+input[type="radio"]:focus{
+	outline: none;
+}
+
+input[type="radio"]:focus + label::before {
+   	box-shadow: 0 0 0 2px	var(--green);
+}
+
+input[type="radio"]:not(:checked){
+	display:contents;
+}
+
+input[type="submit"]{
+	background-color: var(--green);
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	box-shadow: -6px 6px 10px #363432;
+}
+
+input:invalid, select:invalid, textarea:invalid{
+	box-shadow: -6px 6px 10px #363432;
+}
+
+input:focus, select:focus, textarea:focus{
+	outline: 3px solid var(--green);
+}
+
+input[type="submit"]:focus{
+	outline: 3px solid	var(--red);
+}
+
+input[type="submit"]:hover{
+	box-shadow: -3px 3px 5px #363432;
+}
+
+footer{
+	padding-top: 30px;
+	background-color: var(--green);
+	color: var(--white);
+	padding-bottom: 35px;
+	line-height: 1.75;
+}
+
+#contact footer{
+	padding-top: 30px;
+	background-color: var(--green);
+	color: var(--white);
+	padding-bottom: 35px;
+}
